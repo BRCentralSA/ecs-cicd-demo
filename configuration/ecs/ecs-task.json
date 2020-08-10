@@ -1,0 +1,44 @@
+{
+    "executionRoleArn": "arn:aws:iam::__AWS_ACCOUNT_ID__:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/ecs-demo-task",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "portMappings": [
+                {
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "containerPort": 5000
+                }
+            ],
+            "cpu": 256,
+            "environment": [
+                {
+                    "name": "APP_VERSION",
+                    "value": "1.5"
+                }
+            ],
+            "mountPoints": [],
+            "memory": 256,
+            "volumesFrom": [],
+            "image": "__AWS_ACCOUNT_ID__.dkr.ecr.us-east-1.amazonaws.com/ecs-demo:__IMAGE_TAG__",
+            "essential": true,
+            "name": "ecs-demo-app"
+        }
+    ],
+    "taskRoleArn": "arn:aws:iam::__AWS_ACCOUNT_ID__:role/web-dashboard-role",
+    "family": "ecs-demo-task",
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "networkMode": "bridge",
+    "inferenceAccelerators": [],
+    "volumes": [],
+    "placementConstraints": []
+}
