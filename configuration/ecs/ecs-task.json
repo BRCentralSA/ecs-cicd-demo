@@ -27,7 +27,7 @@
             "mountPoints": [],
             "memory": 256,
             "volumesFrom": [],
-            "image": "__AWS_ACCOUNT_ID__.dkr.ecr.us-east-1.amazonaws.com/ecs-demo:__IMAGE_TAG__",
+            "image": "<IMAGE1_NAME>",
             "essential": true,
             "name": "ecs-demo-app"
         }
