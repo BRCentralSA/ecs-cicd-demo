@@ -6,6 +6,11 @@ This demonstration have teh purporse to demonstrate how to create an ECS Cluster
 
 The cluster architecture diagram that we are going to provision in the Demonstration with EC2 Nodes.
 
+<p align="center"> 
+<img src="images/ECS-Diagram.png">
+</p>
+
+
 # CI/CD Diagram
 
 This is a sample architecture of our CI/CD process using CodePipeline, CodeBuild and CodeDeploy
